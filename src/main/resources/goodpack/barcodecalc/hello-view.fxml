@@ -196,7 +196,7 @@
             </MenuItem>
          </items>
       </MenuButton>
-      <MenuButton fx:id="FirstBar" mnemonicParsing="false" prefHeight="26.0" prefWidth="118.0" text="SecondBar">
+      <MenuButton fx:id="FirstBar" mnemonicParsing="false" prefHeight="26.0" prefWidth="118.0" text="FirstBar">
          <items>
             <MenuItem mnemonicParsing="false" text="0">
                <graphic>
