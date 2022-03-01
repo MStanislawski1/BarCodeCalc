@@ -6,6 +6,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 
 public class HelloController {
@@ -56,6 +59,18 @@ public class HelloController {
     public Button Gray1;
     public Button White1;
 
+    //public TextField ResultField;
+    public Label ResultDisplay;
+    public String result;
+    //List ResultList = new ArrayList();
+    //public int number;
+    Object [] number =new Object[5];
+    List<Object> ResultFinal= Arrays.asList(number);
+    public Button Calculatebtn;
+    public int ResultInOhms;
+    public int a,b,c,d;
+
+
     public static void ThirdBarAllow(){
         System.out.println("sada");
 
@@ -73,49 +88,203 @@ public class HelloController {
         }
     }
 
-    public void btnBlack4(){System.out.println("Black4");}
-    public void btnBrown4(){System.out.println("Brown4");}
-    public void btnRed4(){System.out.println("btnRed4");}
-    public void btnOrange4(){System.out.println("btnOrange4");}
-    public void btnYellow4(){System.out.println("btnYellow4");}
-    public void btnGreen4(){System.out.println("btnGreen4");}
-    public void btnBlue4(){System.out.println("btnBlue4");}
-    public void btnPurple4(){System.out.println("btnPurple4");}
-    public void btnGray4(){System.out.println("btnGray4");}
-    public void btnWhite4(){System.out.println("btnWhite4");}
+    public void getResult(){
+        if (chAllow.isSelected()) {
+            a = (int) ResultFinal.get(0);
+            b = (int) ResultFinal.get(1);
+            c = (int) ResultFinal.get(2);
+            d = (int) ResultFinal.get(3);
+
+            this.a = a * 100;
+            this.b = b * 10;
+            this.d = (int) Math.pow(10, d);
+
+            ResultInOhms = (a + b + c) * d;
+
+            ResultDisplay.setText(ResultInOhms + "Ohms");
+        }
+        else{
+            a = (int) ResultFinal.get(0);
+            b = (int) ResultFinal.get(1);
+            c = (int) ResultFinal.get(2);
+
+            this.a = a * 10;
+            this.c = (int) Math.pow(10, c);
+
+            ResultInOhms=(a+b)*c;
+
+            ResultDisplay.setText(ResultInOhms + "Ohms");
+        }
+    }
+
+    public void btnBlack4(){
+        number [3] = 0;
+        System.out.println("Black4");
+        result="black";
+        //ResultField.setText(result);
+        System.out.println(ResultFinal);
+    }
+    public void btnBrown4(){System.out.println("Brown4");
+        number [3] = 1;
+//        ResultList.add(3,"1");
+//        System.out.println(ResultList);
+        System.out.println(ResultFinal);
+    }
+    public void btnRed4(){System.out.println("btnRed4");
+        number [3] = 2;
+        System.out.println(ResultFinal);
+    }
+    public void btnOrange4(){System.out.println("btnOrange4");
+        number [3] = 3;
+        System.out.println(ResultFinal);
+    }
+    public void btnYellow4(){System.out.println("btnYellow4");
+        number [3] = 4;
+        System.out.println(ResultFinal);
+    }
+    public void btnGreen4(){System.out.println("btnGreen4");
+        number [3] = 5;
+        System.out.println(ResultFinal);
+    }
+    public void btnBlue4(){System.out.println("btnBlue4");
+        number [3] = 6;
+        System.out.println(ResultFinal);
+    }
+    public void btnPurple4(){System.out.println("btnPurple4");
+        number [3] = 7;
+        System.out.println(ResultFinal);
+    }
+    public void btnGray4(){System.out.println("btnGray4");
+        number [3] = 8;
+        System.out.println(ResultFinal);
+    }
+    public void btnWhite4(){System.out.println("btnWhite4");
+        number [3] = 9;
+        System.out.println(ResultFinal);
+    }
 ////////////////////////////////////////////////////////////////
-    public void btnBlack3(){System.out.println("btnBlack3");}
-    public void btnBrown3(){System.out.println("btnBrown3");}
-    public void btnRed3(){System.out.println("btnRed3");}
-    public void btnOrange3(){System.out.println("btnOrange3");}
-    public void btnYellow3(){System.out.println("btnYellow3");}
-    public void btnGreen3(){System.out.println("btnGreen3");}
-    public void btnBlue3(){System.out.println("btnBlue3");}
-    public void btnPurple3(){System.out.println("btnPurple3");}
-    public void btnGray3(){System.out.println("btnGray3");}
-    public void btnWhite3(){System.out.println("btnWhite3");}
+    public void btnBlack3(){System.out.println("btnBlack3");
+        number [2] = 0;
+        System.out.println(ResultFinal);
+    }
+    public void btnBrown3(){System.out.println("btnBrown3");
+        number [2] = 1;
+        System.out.println(ResultFinal);
+    }
+    public void btnRed3(){System.out.println("btnRed3");
+        number [2] = 2;
+        System.out.println(ResultFinal);
+    }
+    public void btnOrange3(){System.out.println("btnOrange3");
+        number [2] = 3;
+        System.out.println(ResultFinal);
+    }
+    public void btnYellow3(){System.out.println("btnYellow3");
+        number [2] = 4;
+        System.out.println(ResultFinal);
+    }
+    public void btnGreen3(){System.out.println("btnGreen3");
+        number [2] = 5;
+        System.out.println(ResultFinal);
+    }
+    public void btnBlue3(){System.out.println("btnBlue3");
+        number [2] = 6;
+        System.out.println(ResultFinal);
+    }
+    public void btnPurple3(){System.out.println("btnPurple3");
+        number [2] = 7;
+        System.out.println(ResultFinal);
+    }
+    public void btnGray3(){System.out.println("btnGray3");
+        number [2] = 8;
+        System.out.println(ResultFinal);
+    }
+    public void btnWhite3(){System.out.println("btnWhite3");
+        number [2] = 9;
+        System.out.println(ResultFinal);
+    }
 ////////////////////////////////////////////////////////////////
-    public void btnBlack2(){System.out.println("btnBlack2");}
-    public void btnBrown2(){System.out.println("btnBrown2");}
-    public void btnRed2(){System.out.println("btnRed2");}
-    public void btnOrange2(){System.out.println("btnOrange2");}
-    public void btnYellow2(){System.out.println("btnYellow2");}
-    public void btnGreen2(){System.out.println("btnGreen2");}
-    public void btnBlue2(){System.out.println("btnBlue2");}
-    public void btnPurple2(){System.out.println("btnPurple2");}
-    public void btnGray2(){System.out.println("btnGray2");}
-    public void btnWhite2(){System.out.println("btnWhite2");}
+    public void btnBlack2(){System.out.println("btnBlack2");
+        number [1] = 0;
+        System.out.println(ResultFinal);
+    }
+    public void btnBrown2(){System.out.println("btnBrown2");
+        number [1] = 1;
+        System.out.println(ResultFinal);
+    }
+    public void btnRed2(){System.out.println("btnRed2");
+        number [1] = 2;
+        System.out.println(ResultFinal);
+    }
+    public void btnOrange2(){System.out.println("btnOrange2");
+        number [1] = 3;
+        System.out.println(ResultFinal);
+    }
+    public void btnYellow2(){System.out.println("btnYellow2");
+        number [1] = 4;
+        System.out.println(ResultFinal);
+    }
+    public void btnGreen2(){System.out.println("btnGreen2");
+        number [1] = 5;
+        System.out.println(ResultFinal);
+    }
+    public void btnBlue2(){System.out.println("btnBlue2");
+        number [1] = 6;
+        System.out.println(ResultFinal);
+    }
+    public void btnPurple2(){System.out.println("btnPurple2");
+        number [1] = 7;
+        System.out.println(ResultFinal);
+    }
+    public void btnGray2(){System.out.println("btnGray2");
+        number [1] = 8;
+        System.out.println(ResultFinal);
+    }
+    public void btnWhite2(){System.out.println("btnWhite2");
+        number [1] = 9;
+        System.out.println(ResultFinal);
+    }
 ////////////////////////////////////////////////////////////////
-    public void btnBlack1(){System.out.println("btnBlack1");}
-    public void btnBrown1(){System.out.println("btnBrown1");}
-    public void btnRed1(){System.out.println("btnRed1");}
-    public void btnOrange1(){System.out.println("btnOrange1");}
-    public void btnYellow1(){System.out.println("btnYellow1");}
-    public void btnGreen1(){System.out.println("btnGreen1");}
-    public void btnBlue1(){System.out.println("btnBlue1");}
-    public void btnPurple1(){System.out.println("btnPurple1");}
-    public void btnGray1(){System.out.println("btnGray1");}
-    public void btnWhite1(){System.out.println("btnWhite1");}
+    public void btnBlack1(){System.out.println("btnBlack1");
+        number [0] = 0;
+        System.out.println(ResultFinal);
+    }
+    public void btnBrown1(){System.out.println("btnBrown1");
+        number [0] = 1;
+        System.out.println(ResultFinal);
+    }
+    public void btnRed1(){System.out.println("btnRed1");
+        number [0] = 2;
+        System.out.println(ResultFinal);
+    }
+    public void btnOrange1(){System.out.println("btnOrange1");
+        number [0] = 3;
+        System.out.println(ResultFinal);
+    }
+    public void btnYellow1(){System.out.println("btnYellow1");
+        number [0] = 4;
+        System.out.println(ResultFinal);
+    }
+    public void btnGreen1(){System.out.println("btnGreen1");
+        number [0] = 5;
+        System.out.println(ResultFinal);
+    }
+    public void btnBlue1(){System.out.println("btnBlue1");
+        number [0] = 6;
+        System.out.println(ResultFinal);
+    }
+    public void btnPurple1(){System.out.println("btnPurple1");
+        number [0] = 7;
+        System.out.println(ResultFinal);
+    }
+    public void btnGray1(){System.out.println("btnGray1");
+        number [0] = 8;
+        System.out.println(ResultFinal);
+    }
+    public void btnWhite1(){System.out.println("btnWhite1");
+        number [0] = 9;
+        System.out.println(ResultFinal);
+    }
 
 
 

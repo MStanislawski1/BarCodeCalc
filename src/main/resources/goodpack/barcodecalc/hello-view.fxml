@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -10,10 +11,11 @@
 
 <GridPane prefHeight="339.0" prefWidth="262.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="goodpack.barcodecalc.HelloController">
    <columnConstraints>
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="274.0" minWidth="10.0" prefWidth="198.79998779296875" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.20001220703125" minWidth="10.0" prefWidth="101.20001220703125" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="274.0" minWidth="10.0" prefWidth="137.000048828125" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.20001220703125" minWidth="10.0" prefWidth="125.79995117187497" />
    </columnConstraints>
    <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -86,56 +88,56 @@
             <CheckBox fx:id="chAllow" mnemonicParsing="false" onAction="#chAllowChange" prefHeight="18.0" prefWidth="119.0" text="Allow 4th bar" />
          </children>
       </GridPane>
-      <MenuButton fx:id="ThirdBar" mnemonicParsing="false" prefHeight="26.0" prefWidth="118.0" text="ThirdBar" GridPane.rowIndex="2">
+      <MenuButton fx:id="ThirdBar" mnemonicParsing="false" prefHeight="26.0" prefWidth="118.0" text="ThirdBar" textAlignment="CENTER" GridPane.rowIndex="2">
          <items>
             <MenuItem mnemonicParsing="false" text="0">
                <graphic>
-                  <Button fx:id="Black3" mnemonicParsing="false" onAction="#btnBlack3" text="Black" />
+                  <Button fx:id="Black3" mnemonicParsing="false" onAction="#btnBlack3" style="-fx-background-color: BLACK;" text="Black" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
                </graphic>
             </MenuItem>
             <MenuItem mnemonicParsing="false" text="1">
                <graphic>
-                  <Button fx:id="Brown3" mnemonicParsing="false" onAction="#btnBrown3" text="Brown" />
+                  <Button fx:id="Brown3" mnemonicParsing="false" onAction="#btnBrown3" style="-fx-background-color: BROWN;" text="Brown" textFill="WHITE" />
                </graphic>
             </MenuItem>
             <MenuItem mnemonicParsing="false" text="2">
                <graphic>
-                  <Button fx:id="Red3" mnemonicParsing="false" onAction="#btnRed3" text="Red" />
+                  <Button fx:id="Red3" mnemonicParsing="false" onAction="#btnRed3" style="-fx-background-color: RED;" text="Red" />
                </graphic>
             </MenuItem>
             <MenuItem mnemonicParsing="false" text="3">
                <graphic>
-                  <Button fx:id="Orange3" mnemonicParsing="false" onAction="#btnOrange3" text="Orange" />
+                  <Button fx:id="Orange3" mnemonicParsing="false" onAction="#btnOrange3" style="-fx-background-color: ORANGE;" text="Orange" />
                </graphic>
             </MenuItem>
             <MenuItem mnemonicParsing="false" text="4">
                <graphic>
-                  <Button fx:id="Yellow3" mnemonicParsing="false" onAction="#btnYellow3" text="Yellow" />
+                  <Button fx:id="Yellow3" mnemonicParsing="false" onAction="#btnYellow3" style="-fx-background-color: YELLOW;" text="Yellow" />
                </graphic>
             </MenuItem>
             <MenuItem mnemonicParsing="false" text="5">
                <graphic>
-                  <Button fx:id="Green3" mnemonicParsing="false" onAction="#btnGreen3" text="Green" />
+                  <Button fx:id="Green3" mnemonicParsing="false" onAction="#btnGreen3" style="-fx-background-color: GREEN;" text="Green" />
                </graphic>
             </MenuItem>
             <MenuItem mnemonicParsing="false" text="6">
                <graphic>
-                  <Button fx:id="Blue3" mnemonicParsing="false" onAction="#btnBlue3" text="Blue" />
+                  <Button fx:id="Blue3" mnemonicParsing="false" onAction="#btnBlue3" style="-fx-background-color: BLUE;" text="Blue" textFill="WHITE" />
                </graphic>
             </MenuItem>
             <MenuItem mnemonicParsing="false" text="7">
                <graphic>
-                  <Button fx:id="Purple3" mnemonicParsing="false" onAction="#btnPurple3" text="Purple" />
+                  <Button fx:id="Purple3" mnemonicParsing="false" onAction="#btnPurple3" style="-fx-background-color: PURPLE;" text="Purple" textFill="WHITE" />
                </graphic>
             </MenuItem>
             <MenuItem mnemonicParsing="false" text="8">
                <graphic>
-                  <Button fx:id="Gray3" mnemonicParsing="false" onAction="#btnGray3" text="Gray" />
+                  <Button fx:id="Gray3" mnemonicParsing="false" onAction="#btnGray3" style="-fx-background-color: GRAY;" text="Gray" />
                </graphic>
             </MenuItem>
             <MenuItem mnemonicParsing="false" text="9">
                <graphic>
-                  <Button fx:id="White3" mnemonicParsing="false" onAction="#btnWhite3" text="White" />
+                  <Button fx:id="White3" mnemonicParsing="false" onAction="#btnWhite3" style="-fx-background-color: WHITE;" text="White" />
                </graphic>
             </MenuItem>
          </items>
@@ -248,5 +250,19 @@
             </MenuItem>
          </items>
       </MenuButton>
+      <GridPane GridPane.columnIndex="1" GridPane.rowIndex="4">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="58.20001220703125" minWidth="10.0" prefWidth="38.20001220703125" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="96.60003662109375" minWidth="10.0" prefWidth="87.79998779296875" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="18.0" prefWidth="49.0" text="Result" />
+            <Label fx:id="ResultDisplay" prefHeight="18.0" prefWidth="76.0" text="0.0" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <Button fx:id="Calculatebtn" mnemonicParsing="false" onAction="#getResult" prefHeight="26.0" prefWidth="127.0" text="Calculate" GridPane.rowIndex="4" />
    </children>
 </GridPane>
