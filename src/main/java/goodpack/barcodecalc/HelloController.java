@@ -64,6 +64,31 @@ public class HelloController {
     public String result;
     //List ResultList = new ArrayList();
     //public int number;
+
+    /*TODO
+        Pierwsze: koniecznie używaj poniższych skrótów:
+        CTRL+ALT+L - wyrównuje kod
+        CTRL+ALT+O - usuwa niepotrzebne importy
+     */
+
+    /*TODO
+        Po drugie zanim uznasz, ze to co zrobiłeś jest ok przejdź do:
+        Analyze -> Inspect Code -> Whole project (później wystarczy uncommited)
+        Wtedy na dole pojawią ci się sugestie poprawek i aplikacja sama jest w stanie większość dodać, jeżeli je zaakceptujesz
+        Oczywiście nie ma potrzeby przerabiania wszystkiego co sugeruje Inspection Results, ale tak 80% wskazówek jest do zastosowania
+        I będzie to dla ciebie lekcja
+     */
+    
+    /*TODO
+        Właściwie to czemu to jest lista, a nie tablica? Masz tam tylko cyfry.
+        Zamiast tych dwóch linijek:
+            Object [] number =new Object[5];
+            List<Object> number= Arrays.asList(number);
+        wystarczy:
+            int[] number = new int[5];
+        Będzie to wymagało wielu poprawek więc polecam: CTRL+R
+     */
+
     Object [] number =new Object[5];
     List<Object> ResultFinal= Arrays.asList(number);
     public Button Calculatebtn;
@@ -79,6 +104,15 @@ public class HelloController {
 
     public void chAllowChange(){
 
+        /*TODO
+            To może być uproszczone.
+            Jedyne co robi blok if/else to wywołanie funkcji setDisable, która przyjmuje wartość typu boolean,
+            a ta wartość to nic innego jak warunek bloku if/else
+            To oznacza, że blok if/else może być zastąpiony pojedynczym wywołaniem funkcji setDisable, która jako parametr przyjmie warunek isSelected:
+                FourthBar.setDisable(!chAllow.isSelected());
+            Wykrzyknik oznacza zaprzeczenie. Cały blok if/else może być zastąpiony powyższą linijką.
+         */
+
         if(chAllow.isSelected())
         {
             FourthBar.setDisable(false);
@@ -89,6 +123,11 @@ public class HelloController {
     }
 
     public void getResult(){
+
+        /*TODO
+            Tak jak wcześniej mówiłam, wspólne liniki wyciągnąć poza blok if/else, łącznie z przypisaniem wartości do zmiennej d
+         */
+
         if (chAllow.isSelected()) {
             a = (int) ResultFinal.get(0);
             b = (int) ResultFinal.get(1);
