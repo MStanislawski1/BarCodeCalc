@@ -200,52 +200,52 @@
          <items>
             <MenuItem mnemonicParsing="false" text="0">
                <graphic>
-                  <Button fx:id="Black1" mnemonicParsing="false" onAction="#btnBlack1" text="Black" />
+                  <Button fx:id="Black1" mnemonicParsing="false" onAction="#btnBlack1" style="-fx-background-color: BLACK;" text="Black" textFill="WHITE" />
                </graphic>
             </MenuItem>
             <MenuItem mnemonicParsing="false" text="1">
                <graphic>
-                  <Button fx:id="Brown1" mnemonicParsing="false" onAction="#btnBrown1" text="Brown" />
+                  <Button fx:id="Brown1" mnemonicParsing="false" onAction="#btnBrown1" style="-fx-background-color: BROWN;" text="Brown" textFill="WHITE" />
                </graphic>
             </MenuItem>
             <MenuItem mnemonicParsing="false" text="2">
                <graphic>
-                  <Button fx:id="Red1" mnemonicParsing="false" onAction="#btnRed1" text="Red" />
+                  <Button fx:id="Red1" mnemonicParsing="false" onAction="#btnRed1" style="-fx-background-color: RED;" text="Red" />
                </graphic>
             </MenuItem>
             <MenuItem mnemonicParsing="false" text="3">
                <graphic>
-                  <Button fx:id="Orange1" mnemonicParsing="false" onAction="#btnOrange1" text="Orange" />
+                  <Button fx:id="Orange1" mnemonicParsing="false" onAction="#btnOrange1" style="-fx-background-color: ORANGE;" text="Orange" />
                </graphic>
             </MenuItem>
             <MenuItem mnemonicParsing="false" text="4">
                <graphic>
-                  <Button fx:id="Yellow1" mnemonicParsing="false" onAction="#btnYellow1" text="Yellow" />
+                  <Button fx:id="Yellow1" mnemonicParsing="false" onAction="#btnYellow1" style="-fx-background-color: YELLOW;" text="Yellow" />
                </graphic>
             </MenuItem>
             <MenuItem mnemonicParsing="false" text="5">
                <graphic>
-                  <Button fx:id="Green1" mnemonicParsing="false" onAction="#btnGreen1" text="Green" />
+                  <Button fx:id="Green1" mnemonicParsing="false" onAction="#btnGreen1" style="-fx-background-color: GREEN;" text="Green" />
                </graphic>
             </MenuItem>
             <MenuItem mnemonicParsing="false" text="6">
                <graphic>
-                  <Button fx:id="Blue1" mnemonicParsing="false" onAction="#btnBlue1" text="Blue" />
+                  <Button fx:id="Blue1" mnemonicParsing="false" onAction="#btnBlue1" style="-fx-background-color: BLUE;" text="Blue" textFill="WHITE" />
                </graphic>
             </MenuItem>
             <MenuItem mnemonicParsing="false" text="7">
                <graphic>
-                  <Button fx:id="Purple1" mnemonicParsing="false" onAction="#btnPurple1" text="Purple" />
+                  <Button fx:id="Purple1" mnemonicParsing="false" onAction="#btnPurple1" style="-fx-background-color: PURPLE;" text="Purple" textFill="WHITE" />
                </graphic>
             </MenuItem>
             <MenuItem mnemonicParsing="false" text="8">
                <graphic>
-                  <Button fx:id="Gray1" mnemonicParsing="false" onAction="#btnGray1" text="Gray" />
+                  <Button fx:id="Gray1" mnemonicParsing="false" onAction="#btnGray1" style="-fx-background-color: GRAY;" text="Gray" />
                </graphic>
             </MenuItem>
             <MenuItem mnemonicParsing="false" text="9">
                <graphic>
-                  <Button fx:id="White1" mnemonicParsing="false" onAction="#btnWhite1" text="White" />
+                  <Button fx:id="White1" mnemonicParsing="false" onAction="#btnWhite1" style="-fx-background-color: WHITE;" text="White" />
                </graphic>
             </MenuItem>
          </items>
