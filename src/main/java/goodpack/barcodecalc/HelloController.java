@@ -148,15 +148,15 @@ public class HelloController {
         }
         if(ResultInOhms>=1000 && ResultInOhms<1000000){
             ResultDisplay.setText(ResultInOhms/1000 + "KOhms");
-            System.out.println("dupa1");
+            System.out.println("zm1");
         }
         else if(ResultInOhms>1000000){
             ResultDisplay.setText(ResultInOhms/1000000 + "MOhms");
-            System.out.println("dupa2");
+            System.out.println("zm2");
         }
         else {
             ResultDisplay.setText(ResultInOhms + "Ohms");
-            System.out.println("dupa3");
+            System.out.println("zm3");
         }
 
     }
