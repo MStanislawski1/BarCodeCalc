@@ -59,6 +59,8 @@ public class HelloController {
     public Button Gray1;
     public Button White1;
 
+    public Button dispTabBtn;
+
     //public TextField ResultField;
     public Label ResultDisplay;
     public String result;
@@ -89,23 +91,18 @@ public class HelloController {
         Będzie to wymagało wielu poprawek więc polecam: CTRL+R
      */
 
-    Object[] number = new Object[5];
-    //int[] number=new int[5];
-    List<Object> ResultFinal = Arrays.asList(number);
+    //Object[] number = new Object[5];
+    int[] number=new int[5];
+    //List<Object> ResultFinal = Arrays.asList(number);
     public Button Calculatebtn;
     public int ResultInOhms;
     public int a, b, c, d;
 
 
-    public static void ThirdBarAllow() {
-        System.out.println("sada");
-
-    }
-
-
     public void chAllowChange() {
 
         /*TODO
+            --------DONE-------------
             To może być uproszczone.
             Jedyne co robi blok if/else to wywołanie funkcji setDisable, która przyjmuje wartość typu boolean,
             a ta wartość to nic innego jak warunek bloku if/else
@@ -113,6 +110,7 @@ public class HelloController {
                 FourthBar.setDisable(!chAllow.isSelected());
             Wykrzyknik oznacza zaprzeczenie. Cały blok if/else może być zastąpiony powyższą linijką.
          */
+
         FourthBar.setDisable(!chAllow.isSelected());
 //        if (chAllow.isSelected()) {
 //            FourthBar.setDisable(false);
@@ -126,10 +124,15 @@ public class HelloController {
         /*TODO DONE
              Tak jak wcześniej mówiłam, wspólne liniki wyciągnąć poza blok if/else, łącznie z przypisaniem wartości do zmiennej d
          */
-        a = (int) ResultFinal.get(0);
-        b = (int) ResultFinal.get(1);
-        c = (int) ResultFinal.get(2);
-        d = (int) ResultFinal.get(3);
+//        a = (int) ResultFinal.get(0);
+//        b = (int) ResultFinal.get(1);
+//        c = (int) ResultFinal.get(2);
+//        d = (int) ResultFinal.get(3);
+        a=number[0];
+        b=number[1];
+        c=number[2];
+        d=number[3];
+
 
         if (chAllow.isSelected()) {
             a *= 100;
@@ -143,7 +146,19 @@ public class HelloController {
 
             ResultInOhms = (a + b) * c;
         }
-        ResultDisplay.setText(ResultInOhms + "Ohms");
+        if(ResultInOhms>=1000 && ResultInOhms<1000000){
+            ResultDisplay.setText(ResultInOhms/1000 + "KOhms");
+            System.out.println("dupa1");
+        }
+        else if(ResultInOhms>1000000){
+            ResultDisplay.setText(ResultInOhms/1000000 + "MOhms");
+            System.out.println("dupa2");
+        }
+        else {
+            ResultDisplay.setText(ResultInOhms + "Ohms");
+            System.out.println("dupa3");
+        }
+
     }
 
     public void btnBlack4() {
@@ -151,7 +166,10 @@ public class HelloController {
         System.out.println("Black4");
         result = "black";
         //ResultField.setText(result);
-        System.out.println(ResultFinal);
+        System.out.println(number[3]);
+        System.out.println(number[2]);
+        System.out.println(number[1]);
+        System.out.println(number[0]);
     }
 
     public void btnBrown4() {
@@ -159,238 +177,259 @@ public class HelloController {
         number[3] = 1;
 //        ResultList.add(3,"1");
 //        System.out.println(ResultList);
-        System.out.println(ResultFinal);
+        System.out.println(number[3]);
+        System.out.println(number[2]);
+        System.out.println(number[1]);
+        System.out.println(number[0]);
+        System.out.println(number);
+
     }
 
     public void btnRed4() {
         System.out.println("btnRed4");
         number[3] = 2;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     public void btnOrange4() {
         System.out.println("btnOrange4");
         number[3] = 3;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     public void btnYellow4() {
         System.out.println("btnYellow4");
         number[3] = 4;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     public void btnGreen4() {
         System.out.println("btnGreen4");
         number[3] = 5;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     public void btnBlue4() {
         System.out.println("btnBlue4");
         number[3] = 6;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     public void btnPurple4() {
         System.out.println("btnPurple4");
         number[3] = 7;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     public void btnGray4() {
         System.out.println("btnGray4");
         number[3] = 8;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     public void btnWhite4() {
         System.out.println("btnWhite4");
         number[3] = 9;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     ////////////////////////////////////////////////////////////////
     public void btnBlack3() {
         System.out.println("btnBlack3");
         number[2] = 0;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     public void btnBrown3() {
         System.out.println("btnBrown3");
         number[2] = 1;
-        System.out.println(ResultFinal);
+        System.out.println(number[3]);
+        System.out.println(number[2]);
+        System.out.println(number[1]);
+        System.out.println(number[0]);
     }
 
     public void btnRed3() {
         System.out.println("btnRed3");
         number[2] = 2;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     public void btnOrange3() {
         System.out.println("btnOrange3");
         number[2] = 3;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     public void btnYellow3() {
         System.out.println("btnYellow3");
         number[2] = 4;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     public void btnGreen3() {
         System.out.println("btnGreen3");
         number[2] = 5;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     public void btnBlue3() {
         System.out.println("btnBlue3");
         number[2] = 6;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     public void btnPurple3() {
         System.out.println("btnPurple3");
         number[2] = 7;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     public void btnGray3() {
         System.out.println("btnGray3");
         number[2] = 8;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     public void btnWhite3() {
         System.out.println("btnWhite3");
         number[2] = 9;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     ////////////////////////////////////////////////////////////////
     public void btnBlack2() {
         System.out.println("btnBlack2");
         number[1] = 0;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     public void btnBrown2() {
         System.out.println("btnBrown2");
         number[1] = 1;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     public void btnRed2() {
         System.out.println("btnRed2");
         number[1] = 2;
-        System.out.println(ResultFinal);
+        System.out.println(number[3]);
+        System.out.println(number[2]);
+        System.out.println(number[1]);
+        System.out.println(number[0]);
     }
 
     public void btnOrange2() {
         System.out.println("btnOrange2");
         number[1] = 3;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     public void btnYellow2() {
         System.out.println("btnYellow2");
         number[1] = 4;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     public void btnGreen2() {
         System.out.println("btnGreen2");
         number[1] = 5;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     public void btnBlue2() {
         System.out.println("btnBlue2");
         number[1] = 6;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     public void btnPurple2() {
         System.out.println("btnPurple2");
         number[1] = 7;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     public void btnGray2() {
         System.out.println("btnGray2");
         number[1] = 8;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     public void btnWhite2() {
         System.out.println("btnWhite2");
         number[1] = 9;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     ////////////////////////////////////////////////////////////////
     public void btnBlack1() {
         System.out.println("btnBlack1");
         number[0] = 0;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     public void btnBrown1() {
         System.out.println("btnBrown1");
         number[0] = 1;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     public void btnRed1() {
         System.out.println("btnRed1");
         number[0] = 2;
-        System.out.println(ResultFinal);
+        System.out.println(number[3]);
+        System.out.println(number[2]);
+        System.out.println(number[1]);
+        System.out.println(number[0]);
     }
 
     public void btnOrange1() {
         System.out.println("btnOrange1");
         number[0] = 3;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     public void btnYellow1() {
         System.out.println("btnYellow1");
         number[0] = 4;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     public void btnGreen1() {
         System.out.println("btnGreen1");
         number[0] = 5;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     public void btnBlue1() {
         System.out.println("btnBlue1");
         number[0] = 6;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     public void btnPurple1() {
         System.out.println("btnPurple1");
         number[0] = 7;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     public void btnGray1() {
         System.out.println("btnGray1");
         number[0] = 8;
-        System.out.println(ResultFinal);
+        System.out.println(number);
     }
 
     public void btnWhite1() {
         System.out.println("btnWhite1");
         number[0] = 9;
-        System.out.println(ResultFinal);
+        System.out.println(number);
+    }
+
+    public void getTab(){
+        System.out.println("4 bar: "+number[3]);
+        System.out.println("3 bar: "+number[2]);
+        System.out.println("2 bar: "+number[1]);
+        System.out.println("1 bar: "+number[0]);
     }
 
 

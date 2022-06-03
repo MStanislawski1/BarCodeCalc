@@ -20,7 +20,7 @@ public class HelloApplication extends Application {
 
 
 
-        HelloController t = new HelloController();
+        //HelloController t = new HelloController();
         //t.FourthBar.setEnabled(true);
 
 
